@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd"><map><title>sample1</title>
+ 
+ <topicref href="bats.dita"><topicmeta>
+   <audience type="programmer" job="troubleshooting" experiencelevel="expert"/>
+  </topicmeta>
+  
+  <topicref href="batcaring.dita"><topicref href="../../sequence/tasks/changingtheoil.xml" type="topic" format="dita"/></topicref>
+  <topicref href="batfeeding.dita"><topicref href="../../sequence/tasks/washingthecar.xml" type="topic" format="dita"><topicref href="../../sequence/tasks/shovellingsnow.xml" type="topic" format="dita"><topicref href="../../sequence/tasks/spraypainting.xml" type="topic" format="dita"/><topicref href="../../sequence/tasks/organizing.xml" type="topic" format="dita"/></topicref><topicref href="../../sequence/tasks/takinggarbage.xml" type="topic" format="dita"/></topicref></topicref>
+ </topicref>
+</map>

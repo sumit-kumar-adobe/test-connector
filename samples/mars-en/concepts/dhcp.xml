@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Composite//EN" "ditabase.dtd" [
+]>
+<concept
+id="ide133d951-7a9d-4e5d-aa47-4a0b5f2e8669"><title>DHCP</title>
+<conbody><p>This section describes Dynamic Host Configuration Protocol
+(DHCP) and the tasks required to configure an interface on a Palo
+Alto Networks firewall to act as a DHCP server, client, or relay
+agent. By assigning these roles to different interfaces, the firewall
+can perform multiple roles. </p>
+<ul><li><xref
+href="dhcp-overview.xml#id12d813e3-60d6-414c-bf83-173b4e8cabc5" /></li>
+<li><xref
+href="firewall-dhcp-server-client.xml#idd7ac1e02-8d54-44a2-b399-6f8e65298017" /></li>
+<li><xref
+href="dhcp-messages.xml#id4a346904-4345-4953-b9c6-ae671a7db6e5" /></li>
+<li><xref
+href="dhcp-addressing.xml#id9c0d28bf-c47c-4852-83b0-b51495b5a7dc" /></li>
+<li><xref
+href="dhcp-options.xml#id1071fbfd-8255-432c-a121-b821c3b22da9" /></li>
+<li><xref
+href="configure-interface-dhcp-server.xml#idf9e9149e-fb69-4cb9-8f4c-50bd5f8e642e" /></li>
+<li><xref
+href="configure-interface-dhcp-client.xml#idfe78c92d-f50c-43b1-8a39-d434a20ee068" /></li>
+<li><xref
+href="configure-management-interface-dhcp-client.xml#id8be35dd9-aa11-410b-aa0c-c95384dfe1ac" /></li>
+<li><xref
+href="configure-interface-dhcp-relay-agent.xml#idedf5cad2-4de2-43b8-9f95-8359078a979c" /></li>
+<li><xref
+href="monitor-troubleshoot-dhcp.xml#id33037916-3078-4c7c-84a4-8ce12a00e5cc" /></li></ul></conbody></concept>

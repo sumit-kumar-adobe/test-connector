@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "technicalContent/dtd/topic.dtd" [
+  <!ENTITY phrasey       "This is a bit of text">
+  <!ENTITY nbsp       '&#160;'>
+  <!ENTITY writer     "Gunjan Kumar">
+  <!ENTITY company    "Adobe Systems">
+  <!ENTITY writerDetails "&writer; in &company;">
+]>
+<topic id="topic0">
+  <title>Using Glossary</title>
+  <shortdesc>This is a small &writer;sample on how to use glossary terms in your topics.</shortdesc>
+  <body>
+    <p id="abc">Test Keyword <keyword keyref="mykeyword"></keyword></p>
+    <p><abbreviated-form keyref="jsgloassary"></abbreviated-form>is a developer&#39;s dream because you can update web page without reloading it. </p>
+    <p><term keyref="multiglossary/javascript"></term>is a common acronym for javascript. </p>
+    <p conref="using-glossary.dita#abc"></p>
+    <p>abc</p>
+  </body>
+</topic>

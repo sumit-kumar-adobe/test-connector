@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd"><map><title>Test Glossary</title>
+    
+    <topicref href="using-glossary.dita" type="topic" format="dita"><topicmeta><navtitle>Using Glossary</navtitle></topicmeta></topicref><keydef keys="jsgloassary" href="/content/dam/samples/keyref/glossary/ajax.dita"><topicmeta/></keydef><keydef keys="multiglossary" href="/content/dam/samples/keyref/glossary/multi_glossary.dita"><topicmeta/></keydef><keydef keys="mykeyword" href="/content/empty_ref"><topicmeta><keywords><keyword>my keyword value</keyword></keywords></topicmeta></keydef></map>

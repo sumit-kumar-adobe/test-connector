@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Composite//EN" "ditabase.dtd" [
+]>
+<task
+id="id8db6bf71-25bf-4de8-8679-cadad78d3282"><title>BGP</title>
+<taskbody><context><p>Border Gateway Protocol (BGP) is the primary
+Internet routing protocol. BGP determines network reachability based
+on IP prefixes that are available within autonomous systems (AS),
+where an AS is a set of IP prefixes that a network provider has
+designated to be part of a single routing policy. </p><p>In the
+routing process, connections are established between BGP peers (or neighbors).
+If a route is permitted by the policy, it is stored in the routing
+information base (RIB). Each time the local firewall RIB is updated,
+the firewall determines the optimal routes and sends an update to
+the external RIB, if export is enabled.</p><p>Conditional advertisement
+is used to control how BGP routes are advertised. The BGP routes
+must satisfy conditional advertisement rules before being advertised to
+peers.</p><p>BGP supports the specification of aggregates, which
+combine multiple routes into a single route. During the aggregation
+process, the first step is to find the corresponding aggregation
+rule by performing a longest match that compares the incoming route
+with the prefix values for other aggregation rules.</p><p>For more
+information on BGP, refer to <xref
+href="https://live.paloaltonetworks.com/t5/Articles/Tech-Note-How-to-Configure-BGP/ta-p/62581"
+format="html" scope="external">How to Configure BGP Tech Note</xref>.</p><p>The
+firewall provides a complete BGP implementation, which includes
+the following features:</p><ul><li><p>Specification of one BGP routing
+instance per virtual router.</p></li>
+<li><p>Routing policies based on route-map to control import, export
+and advertisement, prefix-based filtering, and address aggregation.</p></li>
+<li><p>Advanced BGP features that include route reflector, AS confederation, route
+flap dampening, and graceful restart.</p></li>
+<li><p>IGP-BGP interaction to inject routes to BGP using redistribution profiles.</p></li></ul><p>BGP
+configuration consists of the following elements:</p><ul><li><p>Per-routing-instance
+settings, which include basic parameters such as local route ID
+and local AS and advanced options such as path selection, route
+reflector, AS confederation, route flap, and dampening profiles.</p></li>
+<li><p>Authentication profiles, which specify the MD5 authentication
+key for BGP connections. Authentication helps prevent route leaking
+and successful DoS attacks.</p></li>
+<li><p>Peer group and neighbor settings, which include neighbor
+address and remote AS and advanced options such as neighbor attributes
+and connections.</p></li>
+<li><p>Routing policy, which specifies rule sets that peer groups
+and peers use to implement imports, exports, conditional advertisements,
+and address aggregation controls. </p></li></ul><p>Perform the following
+procedure to configure BGP.</p></context>
+<steps><step><cmd>Configure general virtual router configuration settings.</cmd>
+<info><p>See <xref
+href="virtual-routers.xml#id9db38719-7af1-4a89-8695-78a1bd2da637" /> for
+details.</p></info></step>
+<step><cmd>Configure standard BGP configuration settings.</cmd>
+<substeps><substep><cmd>Select the <uicontrol>BGP</uicontrol> tab.</cmd></substep>
+<substep><cmd>Select <uicontrol>Enable</uicontrol> to enable the
+BGP protocol.</cmd></substep>
+<substep><cmd>For <uicontrol>Router ID</uicontrol>, assign an IP
+address to the virtual router.</cmd></substep>
+<substep><cmd>For <uicontrol>AS Number</uicontrol>, enter the number
+of the AS to which the virtual router belongs, based on the router
+ID. Range is 1-4294967295.</cmd></substep></substeps></step>
+<step><cmd>Configure general BGP configuration settings.</cmd>
+<substeps><substep><cmd>Select <uicontrol>BGP</uicontrol> <uicontrol>&gt;
+General</uicontrol>.</cmd></substep>
+<substep><cmd>Select <uicontrol>Reject Default Route</uicontrol> to
+ignore any default routes that are advertised by BGP peers.</cmd></substep>
+<substep><cmd>Select <uicontrol>Install Route</uicontrol> to install
+BGP routes in the global routing table.</cmd></substep>
+<substep><cmd>Select <uicontrol>Aggregate MED</uicontrol> to enable
+route aggregation even when routes have different Multi-Exit Discriminator
+(MED) values.</cmd></substep>
+<substep><cmd>Enter a value for the <uicontrol>Default Local Preference</uicontrol> that
+specifies a value than can be used to determine preferences among
+different paths.</cmd></substep>
+<substep><cmd>Select one of the following values for the AS format
+for interoperability purposes:</cmd>
+<info><ul><li><p>2 Byte (default value)</p></li>
+<li><p>4 Byte</p></li></ul></info></substep>
+<substep><cmd>Enable or disable each of the following values for <uicontrol>Path
+Selection</uicontrol>: </cmd>
+<info><ul><li><p><uicontrol>Always Compare MED</uicontrol>—Enable
+this comparison to choose paths from neighbors in different autonomous systems.</p></li>
+<li><p><uicontrol>Deterministic MED Comparison</uicontrol>—Enable
+this comparison to choose between routes that are advertised by
+IBGP peers (BGP peers in the same autonomous system).</p></li></ul></info></substep>
+<substep><cmd>Click <uicontrol>Add</uicontrol> to include a new
+authentication profile and configure the following settings:</cmd>
+<info><ul><li><p><uicontrol>Profile Name</uicontrol>—Enter a name
+to identify the profile.</p></li>
+<li><p><uicontrol>Secret/Confirm Secret</uicontrol>—Enter and confirm
+a passphrase for BGP peer communications. The Secret is used as
+a key in MD5 authentication.</p></li></ul></info></substep></substeps></step>
+<step><cmd>(Optional) Configure BGP Advanced settings. </cmd>
+<substeps><substep><cmd>On the <uicontrol>Advanced</uicontrol> tab,
+select <uicontrol>Graceful Restart</uicontrol> and configure the
+following timers:</cmd>
+<info><ul><li><p><uicontrol>Stale Route Time (sec)</uicontrol>—Specifies
+the length of time in seconds that a route can say in the stale
+state (range is 1- 3600; default is 120).</p></li>
+<li><p><uicontrol>Local Restart Time (sec)</uicontrol>—Specifies
+the length of time in seconds that the local device waits to restart.
+This value is advertised to peers (range is 1-3600’ default is 120).</p></li>
+<li><p><uicontrol>Max Peer Restart Time (sec)</uicontrol>—Specifies
+the maximum length of time in seconds that the local device accepts as
+a grave period restart time for peer devices (range is 1-3600; default
+is 120).</p></li></ul></info></substep>
+<substep><cmd>Specify an IPv4 identifier to represent the reflector
+cluster in the <uicontrol>Reflector Cluster ID</uicontrol> box.</cmd></substep>
+<substep><cmd>Specify the identifier for the AS confederation to
+be presented as a single AS to external BGP peers in the <uicontrol>Confederation
+Member AS</uicontrol> box.</cmd></substep>
+<substep><cmd>Click <uicontrol>Add</uicontrol> and enter the following
+information for each Dampening Profile that you want to configure,
+select <uicontrol>Enable</uicontrol>, and click <uicontrol>OK</uicontrol>:</cmd>
+<info><ul><li><p><uicontrol>Profile Name</uicontrol>—Enter a name
+to identify the profile.</p></li>
+<li><p><uicontrol>Cutoff</uicontrol>—Specify a route withdrawal
+threshold above which a route advertisement is suppressed (range
+is 0.0-1000.0; default is 1.25).</p></li>
+<li><p><uicontrol>Reuse</uicontrol>—Specify a route withdrawal threshold
+below which a suppressed route is used again (range is 0.0-1000.0;
+default is 5).</p></li>
+<li><p><uicontrol>Max Hold Time (sec)</uicontrol>—Specify the maximum
+length of time in seconds that a route can be suppressed, regardless
+of how unstable it has been (range is 0-3600 seconds; default is 900).</p></li>
+<li><p><uicontrol>Decay Half Life Reachable (sec)</uicontrol>—Specify
+the length of time in seconds after which a route’s stability metric
+is halved if the route is considered reachable (range is 0-3600
+seconds; default is 300).</p></li>
+<li><p><uicontrol>Decay Half Life Unreachable (sec)</uicontrol>—Specify
+the length of time in seconds after which a route’s stability metric
+is halved if the route is considered unreachable (range is 0-3600;
+default is 300).</p></li></ul></info></substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol>.</cmd></substep></substeps></step>
+<step><cmd>Configure the BGP peer group.</cmd>
+<substeps><substep><cmd>Select the <uicontrol>Peer Group</uicontrol> tab
+and click <uicontrol>Add</uicontrol>.</cmd></substep>
+<substep><cmd>Enter a <uicontrol>Name</uicontrol> for the peer group
+and select <uicontrol>Enable</uicontrol>.</cmd></substep>
+<substep><cmd>Select <uicontrol>Aggregated Confed AS Path</uicontrol> to
+include a path to the configured aggregated confederation AS.</cmd></substep>
+<substep><cmd>Select <uicontrol>Soft Reset with Stored Info</uicontrol> to
+perform a soft reset of the firewall after updating the peer settings.</cmd></substep>
+<substep><cmd>Specify the type of peer or group from the <b>Type</b> drop-down
+and configure the associated settings (see below in this table for descriptions
+of Import Next Hop and Export Next Hop).</cmd>
+<info><ul><li><p><uicontrol>IBGP</uicontrol>—<uicontrol>Export Next
+Hop:</uicontrol> Specify <uicontrol>Original</uicontrol> or <uicontrol>Use
+self</uicontrol></p></li>
+<li><p><uicontrol>EBGP Confed</uicontrol>—<uicontrol>Export Next
+Hop:</uicontrol> Specify <uicontrol>Original</uicontrol> or <uicontrol>Use
+self</uicontrol></p></li>
+<li><p><uicontrol>EBGP Confed</uicontrol>—<uicontrol>Export Next
+Hop:</uicontrol> Specify <uicontrol>Original</uicontrol> or <uicontrol>Use
+self</uicontrol></p></li>
+<li><p><uicontrol>EBGP</uicontrol>—<uicontrol>Import Next Hop:</uicontrol> Specify <uicontrol>Original</uicontrol> or <uicontrol>Use
+self</uicontrol>, <uicontrol>Export Next Hop</uicontrol><b>:</b> Specify <uicontrol>Resolve</uicontrol> or <uicontrol>Use
+self</uicontrol>. Select <uicontrol>Remove Private AS</uicontrol> if
+you want to force BGP to remove private AS numbers.</p></li></ul></info></substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol> to save.</cmd></substep></substeps></step>
+<step><cmd>Configure Import and Export rules.</cmd>
+<info><p>The import/export rules are used to import/export routes
+from/to other routers. For example, importing the default route from
+your Internet Service Provider.</p></info>
+<substeps><substep><cmd>Select the <uicontrol>Import</uicontrol> tab
+and then click <uicontrol>Add</uicontrol> and enter a name in the <uicontrol>Rules</uicontrol> field
+and select <uicontrol>Enable</uicontrol>.</cmd></substep>
+<substep><cmd>Click <uicontrol>Add</uicontrol> and select the <uicontrol>Peer
+Group</uicontrol> to which the routes will be imported from.</cmd></substep>
+<substep><cmd>Click the <uicontrol>Match</uicontrol> tab and define
+the options used to filter routing information. You can also define the
+Multi-Exit Discriminator (MED) value and a next hop value to routers
+or subnets for route filtering. The MED option is an external metric
+that lets neighbors know about the preferred path into an AS. A
+lower value is preferred over a higher value.</cmd></substep>
+<substep><cmd>Click the <uicontrol>Action</uicontrol> tab and define
+the action that should occur (allow/deny) based on the filtering options
+defined in the <uicontrol>Match</uicontrol> tab. If <uicontrol>Deny</uicontrol> is
+selected, no further options need to be defined. If the <uicontrol>Allow</uicontrol> action
+is selected, define the other attributes.</cmd></substep>
+<substep><cmd>Click the <uicontrol>Export</uicontrol> tab and define
+export attributes, which are similar to the <uicontrol>Import</uicontrol> settings,
+but are used to control route information that is exported from
+the firewall to neighbors.</cmd></substep>
+<substep><cmd>Click <uicontrol>OK</uicontrol> to save.</cmd></substep></substeps></step>
+<step><cmd>Configure conditional advertising, which allows you to
+control what route to advertise in the event that a different route
+is not available in the local BGP routing table (LocRIB), indicating
+a peering or reachability failure. </cmd>
+<info><p>This is useful in cases where you want to try to force
+routes to one AS over another, for example if you have links to
+the Internet through multiple ISPs and you want traffic to be routed
+to one provider instead of the other unless there is a loss of connectivity
+to the preferred provider.</p></info>
+<substeps><substep><cmd>Select the <uicontrol>Conditional Adv</uicontrol> tab,
+click <uicontrol>Add</uicontrol> and enter a name in the <uicontrol>Policy</uicontrol> field. </cmd></substep>
+<substep><cmd>Select <uicontrol>Enable</uicontrol>.</cmd></substep>
+<substep><cmd>Click <uicontrol>Add</uicontrol> and in the <uicontrol>Used
+By</uicontrol> section enter the peer group(s) that will use the
+conditional advertisement policy.</cmd></substep>
+<substep><cmd>Select the <uicontrol>Non Exist Filter</uicontrol> tab
+and define the network prefix(es) of the preferred route. This specifies
+the route that you want to advertise, if it is available in the
+local BGP routing table. If a prefix is going to be advertised and
+matches a Non Exist filter, the advertisement will be suppressed.</cmd></substep>
+<substep><cmd>Select the <uicontrol>Advertise Filters</uicontrol> tab
+and define the prefix(es) of the route in the Local-RIB routing
+table that should be advertised in the event that the route in the
+non-exist filter is not available in the local routing table. If
+a prefix is going to be advertised and does not match a Non Exist
+filter, the advertisement will occur.</cmd></substep></substeps></step>
+<step><cmd>Configure aggregate options to summarize routes in the
+BGP configuration.</cmd>
+<info><p>BGP route aggregation is used to control how BGP aggregates
+addresses. Each entry in the table results in one aggregate address being
+created. This will result in an aggregate entry in the routing table
+when at least one or more specific route matching the address specified
+is learned. </p></info>
+<substeps><substep><cmd>Select the <uicontrol>Aggregate</uicontrol> tab,
+click <uicontrol>Add</uicontrol> and enter a name for the aggregate
+address.</cmd></substep>
+<substep><cmd>In the <uicontrol>Prefix</uicontrol> field, enter
+the network prefix that will be the primary prefix for the aggregated prefixes.</cmd></substep>
+<substep><cmd>Select the <uicontrol>Suppress Filters</uicontrol> tab
+and define the attributes that will cause the matched routes to
+be suppressed.</cmd></substep>
+<substep><cmd>Select the <uicontrol>Advertise Filters</uicontrol> tab
+and define the attributes that will cause the matched routes to
+always be advertised to peers.</cmd></substep></substeps></step>
+<step><cmd>Configure redistribution rules.</cmd>
+<info><p>This rule is used to redistribute host routes and unknown
+routes that are not on the local RIB to the peers routers. </p></info>
+<substeps><substep><cmd>Select the <uicontrol>Redist Rules</uicontrol> tab
+and click <uicontrol>Add</uicontrol>.</cmd></substep>
+<substep><cmd>In the <uicontrol>Name</uicontrol> field, enter an
+IP subnet or select a redistribution profile. You can also configure a
+new redistribution profile from the drop-down if needed.</cmd></substep>
+<substep><cmd>Click <uicontrol>Enable</uicontrol> to enable the
+rule.</cmd></substep>
+<substep><cmd>In the <uicontrol>Metric</uicontrol> field, enter
+the route metric that will be used for the rule. </cmd></substep>
+<substep><cmd>In the <uicontrol>Set Origin</uicontrol> drop-down,
+select <uicontrol>incomplete</uicontrol>, <uicontrol>igp</uicontrol>,
+or <uicontrol>egp</uicontrol>.</cmd></substep>
+<substep><cmd>(Optional) Set MED, local preference, AS path limit
+and community values.</cmd></substep></substeps></step></steps></taskbody></task>

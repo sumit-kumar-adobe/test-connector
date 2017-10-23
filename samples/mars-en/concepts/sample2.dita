@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "technicalContent/dtd/topic.dtd">
+<topic id="topic_d4eac150-e380-42de-9db2-a597113c7343">
+  <title>sample2</title>
+  <shortdesc>sample2 document</shortdesc>
+  <body>
+    <p>abc</p>
+    <p> <xref href="../../hierarchy/image/carwash.jpg">abcd</xref></p>
+  </body>
+</topic>

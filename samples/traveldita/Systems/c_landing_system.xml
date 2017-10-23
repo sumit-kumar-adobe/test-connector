@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Composite//EN" "technicalContent/dtd/ditabase.dtd">
+<concept id="id_tz9WclU8uLX9">
+    <title>Landing system</title>
+    <shortdesc>The approach to landing is to descend in the same way that any conventional aircraft.
+        That is, the vehicle descends through the air, approaches a landing strip, and makes a
+        normal landing.</shortdesc>
+    <conbody>
+        <p><indexterm>landing system</indexterm>If an emergency landing is required any airport
+            capable of supporting normal traffic can be used to land.</p>
+    </conbody>
+</concept>

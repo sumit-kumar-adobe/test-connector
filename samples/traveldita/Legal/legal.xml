@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "technicalContent/dtd/topic.dtd" [
+]>
+<topic id="x">
+  <title>Sample Topic</title>
+  <body>
+    <p>
+      <simpletable relcolwidth="1* 1* 1*">
+        <sthead>
+          <stentry>a</stentry>
+          <stentry>dasf</stentry>
+          <stentry>dasf</stentry>
+        </sthead>
+        <strow>
+          <stentry>dasf</stentry>
+          <stentry>dasf</stentry>
+          <stentry>dasf</stentry>
+        </strow>
+        <strow>
+          <stentry>dsaf</stentry>
+          <stentry>dasf</stentry>
+          <stentry>dsafa</stentry>
+        </strow>
+      </simpletable>
+    </p>
+    <p>bold with id <b id="b1">bold text</b></p>
+    <p><xref href="legal.xml#b1">before</xref>ph <ph>ph <xref href="../../hierarchy/concepts/shelving.xml#shelvingconcept">content</xref>wi<b conref="legal.xml#b1"></b>th draft com<xref keyref="jsgloassary/ajax">keyref</xref>ment 
+      <draft-comment>
+        <div>draft comment</div>
+        <div>next draft comment</div>
+      </draft-comment>
+      </ph></p>
+    <p id="p1">
+      <div>actual i<object data="../../bone2.mp4">
+        </object>m 
+        <table>
+          <tgroup cols="3">
+            <colspec colname="COL0" colwidth="1*"></colspec>
+            <colspec colname="COL1" colwidth="1*"></colspec>
+            <colspec colname="COL2" colwidth="1*"></colspec>
+            <tbody>
+              <row>
+                <entry></entry>
+                <entry></entry>
+                <entry></entry>
+              </row>
+              <row>
+                <entry namest="COL0" nameend="COL1" morerows="0">dsfsd</entry>
+                <entry></entry>
+              </row>
+              <row>
+                <entry></entry>
+                <entry></entry>
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        age<image id="image1" href="../media/VisitNASA.png">
+        </image></div>
+    </p>
+    <p>Refered image<image href="../../sequence/image/carwash.jpg" conref="legal.xml#image1">
+      </image></p>
+    <ol id="mylist">
+      <li id="start">start</li>
+      <li id="apple">A 
+        <ol>
+          <li id="bear">B 
+            <ol>
+              <li id="cat">Cat</li>
+              <li id="dog">D</li>
+              <li id="eel">E</li>
+            </ol>
+          </li>
+          <li id="end">end</li>
+        </ol>
+      </li>
+      <li>Second para</li>
+    </ol>
+    <p>Same Topi</p>
+  </body>
+</topic>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd" [
+]>
+
+
+
+<map title = "Personal Spaceship Operations Manual"
+xmlns:ditaarch = "http://dita.oasis-open.org/architecture/2005/">
+<topicref href = "Cover/personal_spaceship_operations_manual.xml"
+type = "topic" scope = "local" format = "dita"><data><image
+href = "images/download.jpg"  scale = "100" /></data></topicref>
+<topicref href = "Legal/legal.xml" type = "topic" scope = "local"
+format = "dita"><data><image href = "images/HD-Wallpapers1_FOSmVKg.jpeg"
+height = "911.999pt" width = "2880.000pt" /></data></topicref>
+<topicref href = "Contacts/contacts.xml" type = "topic" scope = "local"
+format = "dita"><data><image href = "images/jdnksjd.jpg"  height
+= "911.999pt" width = "2880.000pt" /></data></topicref>
+<topicref navtitle = "General description"
+href = "GeneralDescription/general_description.xml" type = "topic"
+scope = "local" format = "dita"><data><image href = "images/sample.jpg"
+height = "911.999pt" width = "2880.000pt" /></data>
+<topicref navtitle = "History of flight"
+href = "GeneralDescription/c_history_of_flight.xml" type = "concept"
+scope = "local" format = "dita"><topicmeta><navtitle>History
+of flight</navtitle></topicmeta></topicref>
+<topicref navtitle = "Overview"
+href = "GeneralDescription/c_overview.xml" type = "concept"
+scope = "local" format = "dita">
+<topicref navtitle = "Spaceship requirements"
+href = "GeneralDescription/r_spaceship_requirements.xml"
+type = "reference" scope = "local" format = "dita"><topicmeta>
+<navtitle>Spaceship requirements</navtitle></topicmeta></topicref>
+<topicref navtitle = "Launch and landing site"
+href = "GeneralDescription/r_launch_and_landing_site.xml"
+type = "reference" scope = "local" format = "dita"><topicmeta>
+<navtitle>Launch and landing site</navtitle></topicmeta></topicref></topicref>
+<topicref navtitle = "Vehicle structure"
+href = "GeneralDescription/c_vehicle_structure.xml" type = "concept"
+scope = "local" format = "dita">
+<topicref navtitle = "Crew area"
+href = "GeneralDescription/c_crew_area.xml" type = "concept"
+scope = "local" format = "dita">
+<topicref navtitle = "Adjust the seat temperature"
+href = "GeneralDescription/t_adjust_the_seat_temperature.xml"
+type = "task" scope = "local" format = "dita" product = "ProductA">
+<topicmeta><navtitle>Adjust the seat temperature</navtitle></topicmeta></topicref>
+<topicref navtitle = "Change the seat temperature display"
+href = "GeneralDescription/t_change_the_seat_temperature_display.xml"
+type = "task" scope = "local" format = "dita" product = "ProductA">
+<topicmeta><navtitle>Change the seat temperature display</navtitle></topicmeta></topicref>
+<topicref navtitle = "Recline the seats"
+href = "GeneralDescription/t_recline_the_seats.xml" type = "task"
+scope = "local" format = "dita"><topicmeta><navtitle>Recline
+the seats</navtitle></topicmeta></topicref>
+<topicref navtitle = "Adjust the lighting levels"
+href = "GeneralDescription/t_adjust_the_lighting_levels.xml"
+type = "task" scope = "local" format = "dita"><topicmeta><navtitle>Adjust
+the lighting levels</navtitle></topicmeta></topicref>
+<topicref navtitle = "Use the drink dispenser"
+href = "GeneralDescription/t_use_the_drink_dispenser.xml"
+type = "task" scope = "local" format = "dita"><topicmeta><navtitle>Use
+the drink dispenser</navtitle></topicmeta></topicref></topicref>
+<topicref navtitle = "Wing" href = "GeneralDescription/c_wing.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Wing</navtitle></topicmeta></topicref>
+<topicref navtitle = "Thermal protection"
+href = "GeneralDescription/c_thermal_protection.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Thermal protection</navtitle></topicmeta></topicref></topicref></topicref>
+<topicref navtitle = "Systems" href = "Systems/systems.xml"
+type = "topic" scope = "local" format = "dita"><data><image
+href = "images/sample2.jpg"  height = "911.999pt" width = "2880.000pt"
+/></data>
+<topicref navtitle = "Escape system"
+href = "Systems/c_escape_system.xml" type = "concept"
+scope = "local" format = "dita">
+<topicref navtitle = "Launch pad escape"
+href = "Systems/c_launch_pad_escape.xml" type = "concept"
+scope = "local" format = "dita"><topicmeta><navtitle>Launch
+pad escape</navtitle></topicmeta></topicref>
+<topicref navtitle = "Cabin escape" href = "Systems/c_cabin_escape.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Cabin escape</navtitle></topicmeta></topicref>
+<topicref navtitle = "Landing escape"
+href = "Systems/c_landing_escape.xml" type = "concept"
+scope = "local" format = "dita"><topicmeta><navtitle>Landing
+escape</navtitle></topicmeta></topicref></topicref>
+<topicref navtitle = "Crew and passenger system"
+href = "Systems/c_crew_and_passenger_system.xml" type = "concept"
+scope = "local" format = "dita">
+<topicref navtitle = "Hygiene" href = "Systems/c_hygiene.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Hygiene</navtitle></topicmeta></topicref>
+<topicref navtitle = "Sleep" href = "Systems/c_sleep.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Sleep</navtitle></topicmeta></topicref></topicref>
+<topicref navtitle = "Landing system"
+href = "Systems/c_landing_system.xml" type = "concept"
+scope = "local" format = "dita">
+<topicref navtitle = "Landing gear" href = "Systems/c_landing_gear.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Landing gear</navtitle></topicmeta></topicref>
+<topicref navtitle = "Braking" href = "Systems/c_braking.xml"
+type = "concept" scope = "local" format = "dita"><topicmeta>
+<navtitle>Braking</navtitle></topicmeta></topicref></topicref></topicref>
+<topicref navtitle = "Operating limitations"
+href = "OperatingLimitations/operating_limitations.xml"
+type = "topic" scope = "local" format = "dita"><data><image
+href = "images/jdnksjd.jpg"  height = "911.999pt" width = "2880.000pt"
+/></data>
+<topicref navtitle = "Engine limitations"
+href = "OperatingLimitations/r_engine_limitations.xml"
+type = "reference" scope = "local" format = "dita"><topicmeta>
+<navtitle>Engine limitations</navtitle></topicmeta></topicref>
+<topicref navtitle = "Airspeed limitations"
+href = "OperatingLimitations/r_airspeed_limitations.xml"
+type = "reference" scope = "local" format = "dita">
+<topicref navtitle = "Takeoff"
+href = "OperatingLimitations/r_takeoff.xml" type = "reference"
+scope = "local" format = "dita"><topicmeta><navtitle>Takeoff</navtitle></topicmeta></topicref>
+<topicref navtitle = "Entry" href = "OperatingLimitations/r_entry.xml"
+type = "reference" scope = "local" format = "dita"><topicmeta>
+<navtitle>Entry</navtitle></topicmeta></topicref>
+<topicref navtitle = "Landing"
+href = "OperatingLimitations/r_landing.xml" type = "reference"
+scope = "local" format = "dita"><topicmeta><navtitle>Landing</navtitle></topicmeta></topicref></topicref></topicref></map>

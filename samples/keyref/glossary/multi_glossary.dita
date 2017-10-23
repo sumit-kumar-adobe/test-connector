@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="multi_glossary">
+  <title>Multiple glosary terms in a single file</title>
+  <glossentry id="dhtml">
+    <glossterm>DHTML</glossterm>
+    <glossdef><b>D</b>ynamic <b>HTML</b>. Web development techniques used on the client-side to create interactive web sites.</glossdef>
+  </glossentry>
+  <glossentry id="javascript">
+    <glossterm>JavaScript</glossterm>
+    <glossdef>JavaScript is an object-oriented scripting language supported by all major web browsers. It allows the development of interactive web sites and web applications.</glossdef>
+    <related-links>
+      <link format="html" scope="external" href="https://developer.mozilla.org/en/JavaScript">
+        <linktext>Mozilla&#39;s Official Documentation on JavaScript</linktext>
+      </link>
+    </related-links>
+  </glossentry>
+</glossgroup>

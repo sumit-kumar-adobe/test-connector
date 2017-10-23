@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Composite//EN" "technicalContent/dtd/ditabase.dtd" [
+<!-- Begin Document Specific Declarations -->
+<!ENTITY PartNumber "83-3844-8">
+<!-- End Document Specific Declarations -->
+]>
+<topic id="id_3mvyI2eLErme">
+    <title>Contacts</title>
+    <shortdesc>Questions regarding the organization and content of this document (Documentation ID:
+        &PartNumber;) should be directed to the following departments:</shortdesc>
+    <body>
+        <table frame="topbot" colsep="0" rowsep="0" id="i720486">
+            <title>Contact list</title>
+            <tgroup cols="3" colsep="0" rowsep="0" outputclass="Basic3Col">
+                <colspec colnum="1" colname="1" colwidth="28*" colsep="0"/>
+                <colspec colnum="2" colname="2" colwidth="39*" colsep="0"/>
+                <colspec colnum="3" colname="3" colwidth="33*" colsep="0"/>
+                <thead>
+                    <row rowsep="1">
+                        <entry colname="1">Geographic Region</entry>
+                        <entry colname="2">Company Headquarters</entry>
+                        <entry colname="3">Primary Department</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="1" morerows="1"><p>Europe</p></entry>
+                        <entry colname="2"><p>Helsinki, Finland</p></entry>
+                        <entry colname="3"><p>Asteritie 7D</p></entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="2"><p>Meggen, Switzerland</p></entry>
+                        <entry colname="3"><p>Zentrum-platz</p></entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="1"><p>India</p></entry>
+                        <entry colname="2"><p>Noida, 201301</p></entry>
+                        <entry colname="3"><p>Sector 25A</p></entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="1" morerows="1"><p>North America</p></entry>
+                        <entry colname="2"><p>King City, ON, Canada</p></entry>
+                        <entry colname="3"><p>Documentation</p></entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="2"><p>Fairfax, VA, USA</p></entry>
+                        <entry colname="3"><p>STC Offices</p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>
